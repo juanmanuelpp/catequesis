@@ -11,12 +11,16 @@ la API no tendría que cambiar mucho porque las consultas son simples.
 No se guarda ningún dato personal del niño: solo un "código" que asigna el
 catequista (por ejemplo, un nombre corto o un código de grupo), sin correo,
 sin apellido, sin datos identificables.
+
+DB_PATH = os.path.join("DB_PATH",os.path.dirname(__file__), "catequesis.db")
+
 """
 import sqlite3
 import datetime
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "catequesis.db")
+DB_PATH = os.getenv("DB_PATH", os.path.join(os.path.dirname(__file__), "catequesis.db"))
+
 
 
 def get_conn():
