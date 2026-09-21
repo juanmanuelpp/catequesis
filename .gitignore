@@ -1,10 +1,5 @@
-# Ignorar la base de datos local de SQLite
 backend/catequesis.db
-
-# Ignorar la caché pesada de Inteligencia Artificial
 backend/.cache/
-
-# Archivos del sistema y entornos virtuales locales
 __pycache__/
 *.pyc
 .venv/
