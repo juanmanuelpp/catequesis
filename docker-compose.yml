@@ -1,0 +1,15 @@
+services:
+  catequesis-pwa:
+    build: .
+    container_name: catequesis-pwa
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_data:/app/backend
+      - sqlite_data:/app/backend/db_persistent
+    environment:
+      - HF_HOME=/app/backend/.cache/huggingface
+      - PYTHONUNBUFFERED=1
+volumes:
+  backend_data:
+  sqlite_data:

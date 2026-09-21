@@ -1,0 +1,7 @@
+**/__pycache__/
+**/*.pyc
+backend/catequesis.db
+backend/.cache/
+.git
+.gitignore
+*.zip
